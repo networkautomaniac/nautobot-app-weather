@@ -1,0 +1,26 @@
+{
+    "cookiecutter": {
+        "codeowner_github_usernames": "networkautomaniac",
+        "full_name": "Aaron Britton",
+        "email": "brittonleeaaron@gmail.com",
+        "github_org": "networkautomaniac",
+        "app_name": "weather",
+        "verbose_name": "Weather",
+        "app_slug": "weather",
+        "project_slug": "nautobot-app-weather",
+        "repo_url": "https://github.com/networkautomaniac/nautobot-app-weather",
+        "base_url": "weather",
+        "min_nautobot_version": "2.1.7",
+        "max_nautobot_version": "2.9999",
+        "camel_name": "Weather",
+        "project_short_description": "Weather",
+        "model_class_name": "None",
+        "open_source_license": "Not open source",
+        "docs_base_url": "https://docs.nautobot.com",
+        "docs_app_url": "https://docs.nautobot.com/projects/weather/en/latest",
+        "_template": "nautobot-app",
+        "_output_dir": "/home/abritton/ntc",
+        "_repo_dir": "nautobot-app",
+        "_checkout": null
+    }
+}
