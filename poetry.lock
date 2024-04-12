@@ -3311,13 +3311,13 @@ files = [
 
 [[package]]
 name = "weather-wise"
-version = "0.1.4"
+version = "0.1.5"
 description = "Obtain local weather information based on zipcode."
 optional = false
-python-versions = ">=3.10,<4.0"
+python-versions = "<4.0,>=3.10"
 files = [
-    {file = "weather_wise-0.1.4-py3-none-any.whl", hash = "sha256:fbc0471a21aaa97ff69c6ffdf204aa4811fa8f40f34266132488ac01d0c17d72"},
-    {file = "weather_wise-0.1.4.tar.gz", hash = "sha256:4d487558566f7961d48d0428c85550198e0622c9fa724742535e41f033970951"},
+    {file = "weather_wise-0.1.5-py3-none-any.whl", hash = "sha256:edfc10b805667f47c891356206b9cf955e06eb9b591327db39dd4c9e96b4fe24"},
+    {file = "weather_wise-0.1.5.tar.gz", hash = "sha256:71e994c369a33e589f81e305c639b95aaa25718337bdb917b633a1ef9b168b28"},
 ]
 
 [package.dependencies]

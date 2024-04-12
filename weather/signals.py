@@ -14,7 +14,7 @@ from weather.jobs import UpdateLocationWeather
 
 
 def create_location_custom_field(apps, **kwargs):
-    """Create a custom field (zipcode) called for locations."""
+    """Create a custom field (zipcode) for locations."""
 
     # Use `apps.get_model()` to look up Nautobot core models.
     CustomField = apps.get_model("extras", "CustomField")
@@ -31,10 +31,10 @@ def create_location_custom_field(apps, **kwargs):
             "type": "text",
             "weight": "100",
             "filter_logic": "loose",
-            # "content_types": ["dcim.location"],
             "validation_regex": "^\d{5}$",
         },
     )
+    # Set the ContentType
     custom_field.content_types.set([location_content_type])
 
     return custom_field

@@ -17,18 +17,16 @@ class UpdateLocationWeather(Job):
             zipcode = location.cf.get("zipcode")
             if zipcode:
                 weather = WeatherWise(zipcode)
-                short_forecast = weather.get_short_forecast()
-                temperature_in_fahrenheit = weather.get_temperature_in_fahrenheit()
-                probability_of_precipitation = weather.get_probability_of_precipitation()
-                wind = weather.get_wind()
 
                 Weather.objects.update_or_create(
                     location=location,
                     defaults={
-                        "short_forecast": short_forecast,
-                        "temperature": temperature_in_fahrenheit,
-                        "probability_of_precipitation": probability_of_precipitation,
-                        "wind": wind,
+                        "short_forecast": weather.get_short_forecast(),
+                        "temperature": weather.get_temperature_in_fahrenheit(),
+                        "probability_of_precipitation": weather.get_probability_of_precipitation(),
+                        "wind_speed": weather.get_wind_speed(),
+                        "wind_direction": weather.get_wind_direction(),
+                        "wind": weather.get_wind(),
                     },
                 )
 
