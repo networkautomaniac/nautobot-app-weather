@@ -24,9 +24,9 @@ class UpdateLocationWeather(Job):
                         "short_forecast": weather.get_short_forecast(),
                         "temperature": weather.get_temperature_in_fahrenheit(),
                         "probability_of_precipitation": weather.get_probability_of_precipitation(),
+                        "relative_humidity": weather.get_relative_humidity(),
                         "wind_speed": weather.get_wind_speed(),
                         "wind_direction": weather.get_wind_direction(),
-                        "wind": weather.get_wind(),
                     },
                 )
 

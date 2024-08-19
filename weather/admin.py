@@ -11,7 +11,8 @@ class WeatherAdmin(NautobotModelAdmin):
         "short_forecast",
         "temperature",
         "probability_of_precipitation",
+        "relative_humidity",
         "wind_speed",
         "wind_direction",
-        "wind",
+        "is_severe",
     )

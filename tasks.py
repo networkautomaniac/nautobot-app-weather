@@ -48,9 +48,9 @@ namespace = Collection("weather")
 namespace.configure(
     {
         "weather": {
-            "nautobot_ver": "2.1.7",
+            "nautobot_ver": "2.3",
             "project_name": "weather",
-            "python_ver": "3.11",
+            "python_ver": "3.12",
             "local": False,
             "compose_dir": os.path.join(os.path.dirname(__file__), "development"),
             "compose_files": [
@@ -519,9 +519,11 @@ def import_db(context, db_name="", input_file="dump.sql"):
             '--execute="',
             f"DROP DATABASE IF EXISTS {db_name};",
             f"CREATE DATABASE {db_name};",
-            ""
-            if db_name == "$MYSQL_DATABASE"
-            else f"GRANT ALL PRIVILEGES ON {db_name}.* TO $MYSQL_USER; FLUSH PRIVILEGES;",
+            (
+                ""
+                if db_name == "$MYSQL_DATABASE"
+                else f"GRANT ALL PRIVILEGES ON {db_name}.* TO $MYSQL_USER; FLUSH PRIVILEGES;"
+            ),
             '"',
             "&&",
             "mysql",

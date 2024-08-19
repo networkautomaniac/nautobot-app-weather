@@ -1,10 +1,8 @@
 from nautobot.apps.ui import TemplateExtension
 
-from weather.models import Weather
-
 
 class LocationWeatherPanel(TemplateExtension):
-    """Add the weather panel to locations on the right side of the page."""
+    """Add a weather panel to locations on the right side of the page."""
 
     model = "dcim.location"
 

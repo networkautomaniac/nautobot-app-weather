@@ -15,7 +15,7 @@ class WeatherConfig(NautobotAppConfig):
     verbose_name = "Weather"
     version = __version__
     author = "Aaron Britton"
-    description = "Weather."
+    description = "Obtains weather related details for a location."
     base_url = "weather"
     required_settings = []
     min_version = "2.1.7"

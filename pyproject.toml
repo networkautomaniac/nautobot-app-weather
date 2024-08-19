@@ -26,10 +26,11 @@ include = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.12"
+python = ">=3.12,<3.13"
 # Used for local development
-nautobot = "^2.1.7"
-weather-wise = "^0.1.4"
+nautobot = "^2.3"
+weather-wise = "^0.1.7"
+django = "^4.2"
 
 [tool.poetry.group.dev.dependencies]
 bandit = "*"
@@ -111,7 +112,7 @@ notes = """,
 
 [tool.pylint-nautobot]
 supported_nautobot_versions = [
-    "2.1.7"
+    "2.3"
 ]
 
 [tool.ruff]
