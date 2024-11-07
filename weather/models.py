@@ -17,4 +17,10 @@ class Weather(PrimaryModel):
 
     @property
     def is_severe(self):
+        """
+        Checks if the word "severe" is in the short forecast description.
+
+        Returns:
+            bool: True if "severe" is found in the short_forecast.  Otherwise, False.
+        """
         return "severe" in self.short_forecast.lower()

@@ -4,9 +4,8 @@ Note that we can't directly import models here as this signal callback happens d
 the apps.get_model calls everywhere.
 """
 
-from datetime import timedelta
+from datetime import datetime, timedelta
 from constance import config
-from django.utils import timezone
 from django.contrib.auth import get_user_model
 from nautobot.extras.models import Job, ScheduledJob
 from nautobot.extras.choices import JobExecutionType
@@ -53,16 +52,16 @@ def schedule_job(apps, **kwargs):
     """Schedule the Weather app job."""
 
     # Adjust time to start at the top of the hour.
-    start_time = timezone.now()
+    start_time = datetime.now()
     start_time = start_time.replace(minute=0) + timedelta(hours=1)
-
-    job_class = UpdateLocationWeather
 
     ScheduledJob.objects.update_or_create(
         name="Hourly Location Weather Update",
-        task=f"{job_class.__module__}.{job_class.__name__}",  # "weather.jobs.UpdateLocationWeather
+        task=f"{UpdateLocationWeather.__module__}.{UpdateLocationWeather.__name__}",  # "weather.jobs.UpdateLocationWeather
         defaults={
-            "job_model": Job.objects.get(job_class_name=job_class.__name__, module_name=job_class.__module__),
+            "job_model": Job.objects.get(
+                job_class_name=UpdateLocationWeather.__name__, module_name=UpdateLocationWeather.__module__
+            ),
             "enabled": True,
             "user": get_user_model().objects.get(username="admin"),
             "start_time": start_time,

@@ -1,7 +1,7 @@
 {% load helpers %}
 <div class="panel panel-default">
   <div class="panel-heading">
-      <strong>Weather</strong>
+    <strong>Weather</strong>
   </div>
   <table class="table table-hover panel-body attr-table">
     <tr>
@@ -10,15 +10,21 @@
     </tr>
     <tr>
       <td>Temperature</td>
-      <td>{{ object.weather.temperature|placeholder }}{% if object.weather.temperature %}°F{% endif %}</td>
+      <td>
+        {{ object.weather.temperature|placeholder }}
+      </td>
     </tr>
     <tr>
       <td>Probability of Precipitation</td>
-      <td>{{ object.weather.probability_of_precipitation|placeholder }}{% if object.weather.probability_of_precipitation %}%{% endif %}</td>
+      <td>
+        {{ object.weather.probability_of_precipitation|placeholder }}
+      </td>
     </tr>
     <tr>
       <td>Relative Humidity</td>
-      <td>{{ object.weather.relative_humidity|placeholder }}{% if object.weather.relative_humidity %}%{% endif %}</td>
+      <td>
+        {{ object.weather.relative_humidity|placeholder }}
+      </td>
     </tr>
     <tr>
       <td>Wind Speed</td>
