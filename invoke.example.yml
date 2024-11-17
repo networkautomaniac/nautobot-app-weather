@@ -1,0 +1,15 @@
+---
+weather_app:
+  nautobot_ver: "2.3"
+  python_ver: "3.11"
+  # local: false
+  # compose_dir: "/full/path/to/nautobot-app-weather/development"
+
+# The following is an example of using MySQL as the database backend
+# ---
+# weather_app:
+#   compose_files:
+#     - "docker-compose.base.yml"
+#     - "docker-compose.redis.yml"
+#     - "docker-compose.mysql.yml"
+#     - "docker-compose.dev.yml"

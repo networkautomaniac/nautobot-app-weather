@@ -1,0 +1,32 @@
+{% load helpers %}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <strong>Weather</strong>
+  </div>
+  <table class="table table-hover panel-body attr-table">
+    <tr>
+      <td>Short Forecast</td>
+      <td>{{ object.weather.short_forecast|placeholder }}</td>
+    </tr>
+    <tr>
+      <td>Temperature</td>
+      <td>{{ object.weather.temperature|placeholder }}</td>
+    </tr>
+    <tr>
+      <td>Probability of Precipitation</td>
+      <td>{{ object.weather.probability_of_precipitation|placeholder }}</td>
+    </tr>
+    <tr>
+      <td>Relative Humidity</td>
+      <td>{{ object.weather.relative_humidity|placeholder }}</td>
+    </tr>
+    <tr>
+      <td>Wind Speed</td>
+      <td>{{ object.weather.wind_speed|placeholder }}</td>
+    </tr>
+    <tr>
+      <td>Wind Direction</td>
+      <td>{{ object.weather.wind_direction|placeholder }}</td>
+    </tr>
+  </table>
+</div>
